@@ -3,169 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senior Software Architect - Your Name</title>
+    <title>JSON-Powered Resume</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50">
-    <div class="container mx-auto px-4 py-12 max-w-6xl">
-        <!-- Header -->
-        <div class="flex items-center mb-12">
-            <div class="w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center mr-8">
-                <span class="text-gray-500">Profile Photo</span>
-            </div>
-            <div>
-                <h1 class="text-4xl font-bold text-gray-800 mb-2">Your Name</h1>
-                <p class="text-2xl text-blue-600 font-semibold">Senior Software Architect</p>
-                <p class="text-gray-600 mt-2">16+ years in eCommerce & Digital Solutions</p>
-            </div>
-        </div>
+    <div id="resume-container" class="container mx-auto px-4 py-12 max-w-6xl">
+        <!-- Content will be inserted here -->
+    </div>
 
-        <!-- About Section -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">Professional Summary</h2>
-            <p class="text-gray-600 leading-relaxed">
-                Senior Software Architect with extensive experience in eCommerce solutions, currently serving as Director of Technology at Icreon. Expertise in leading global teams, implementing composable commerce architectures (commercetools, Oracle Commerce), and driving digital transformation. Proven track record in delivering complex projects through coordinated offshore/onshore team management.
-            </p>
-        </section>
+    <script>
+        const resumeData = {
+            "header": {
+                "name": "Your Name",
+                "title": "Senior Software Architect",
+                "experience": "16+ years in eCommerce & Digital Solutions",
+                "image": {
+                    "placeholder": "Profile Photo",
+                    "class": "w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center mr-8"
+                }
+            },
+            "about": {
+                "summary": "Senior Software Architect with extensive experience in eCommerce solutions, currently serving as Director of Technology at Icreon. Expertise in leading global teams, implementing composable commerce architectures (commercetools, Oracle Commerce), and driving digital transformation."
+            },
+            "skills": [
+                "Java & Oracle Commerce",
+                "commercetools",
+                "ATG Framework",
+                "Cloud Architecture (GCP/AWS)",
+                "Docker & Kubernetes",
+                "CI/CD (Jenkins)",
+                "React.js & Frontend Systems",
+                "PL/SQL & Database Design"
+            ],
+            "experience": [
+                {
+                    "title": "Director of Technology",
+                    "company": "Icreon",
+                    "dates": "Jul 2024 - Present",
+                    "highlights": [
+                        "Coordinate offshore/onshore teams",
+                        "Implement quality assurance processes",
+                        "Drive technological innovation"
+                    ]
+                },
+                {
+                    "title": "Senior Commerce Architect",
+                    "company": "changeCX",
+                    "dates": "Nov 2022 - Jul 2024",
+                    "highlights": [
+                        "Composable Commerce architecture design",
+                        "Cloud/on-prem systems integration",
+                        "End-to-end solution implementation"
+                    ]
+                },
+                // Add other experiences following the same structure
+            ],
+            "podcast": {
+                "title": "From Zero to N",
+                "startDate": "Aug 2021",
+                "description": "Discussing technology leadership, career development, and digital transformation strategies with industry experts."
+            },
+            "certifications": [
+                {
+                    "name": "SCJP (Sun Certified Java Programmer)",
+                    "details": "Java 1.4 Platform"
+                },
+                {
+                    "name": "Oracle Commerce Specialist",
+                    "details": "ATG Implementation"
+                }
+            ],
+            "contact": {
+                "location": "Chihuahua, Mexico",
+                "email": "email@example.com",
+                "phone": "+1 234 567 890"
+            }
+        };
 
-        <!-- Skills Grid -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2">Technical Expertise</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded text-center">Java & Oracle Commerce</div>
-                <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded text-center">commercetools</div>
-                <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded text-center">ATG Framework</div>
-                <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded text-center">Cloud Architecture (GCP/AWS)</div>
-                <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded text-center">Docker & Kubernetes</div>
-                <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded text-center">CI/CD (Jenkins)</div>
-                <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded text-center">React.js & Frontend Systems</div>
-                <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded text-center">PL/SQL & Database Design</div>
-            </div>
-        </section>
-
-        <!-- Experience Timeline -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold text-gray-800 mb-8 border-b-2 border-blue-500 pb-2">Professional Journey</h2>
-            <div class="relative">
-                <!-- Timeline line -->
-                <div class="absolute left-1/2 w-1 bg-gray-200 top-0 bottom-0 -ml-px"></div>
-
-                <!-- Icreon -->
-                <div class="mb-8 relative">
-                    <div class="flex items-center mb-4">
-                        <div class="absolute left-1/2 -ml-3 w-6 h-6 bg-blue-500 rounded-full"></div>
-                        <div class="w-5/12 text-right pr-8">
-                            <h3 class="font-semibold text-gray-800">Director of Technology</h3>
-                            <p class="text-gray-600">Icreon</p>
-                            <p class="text-sm text-gray-500">Jul 2024 - Present</p>
-                        </div>
-                        <div class="w-5/12 pl-8">
-                            <div class="bg-white p-6 rounded-lg shadow-sm">
-                                <p class="text-gray-600">Leading global teams in enterprise eCommerce solutions delivery. Driving technical strategy, cloud adoption, and process optimization for international clients.</p>
-                                <ul class="mt-2 list-disc list-inside text-sm text-gray-500">
-                                    <li>Coordinate offshore/onshore teams</li>
-                                    <li>Implement quality assurance processes</li>
-                                    <li>Drive technological innovation</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- changeCX -->
-                <div class="mb-8 relative">
-                    <div class="flex items-center mb-4">
-                        <div class="absolute left-1/2 -ml-3 w-6 h-6 bg-blue-500 rounded-full"></div>
-                        <div class="w-5/12 text-right pr-8">
-                            <h3 class="font-semibold text-gray-800">Senior Commerce Architect</h3>
-                            <p class="text-gray-600">changeCX</p>
-                            <p class="text-sm text-gray-500">Nov 2022 - Jul 2024</p>
-                        </div>
-                        <div class="w-5/12 pl-8">
-                            <div class="bg-white p-6 rounded-lg shadow-sm">
-                                <p class="text-gray-600">Led implementation of composable commerce solutions for major retailers using commercetools.</p>
-                                <ul class="mt-2 list-disc list-inside text-sm text-gray-500">
-                                    <li>Composable Commerce architecture design</li>
-                                    <li>Cloud/on-prem systems integration</li>
-                                    <li>End-to-end solution implementation</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Oracle -->
-                <div class="mb-8 relative">
-                    <div class="flex items-center mb-4">
-                        <div class="absolute left-1/2 -ml-3 w-6 h-6 bg-blue-500 rounded-full"></div>
-                        <div class="w-5/12 text-right pr-8">
-                            <h3 class="font-semibold text-gray-800">Solutions Architect</h3>
-                            <p class="text-gray-600">Oracle</p>
-                            <p class="text-sm text-gray-500">Apr 2021 - Nov 2022</p>
-                        </div>
-                        <div class="w-5/12 pl-8">
-                            <div class="bg-white p-6 rounded-lg shadow-sm">
-                                <p class="text-gray-600">Designed and implemented Oracle Commerce solutions for enterprise clients.</p>
-                                <ul class="mt-2 list-disc list-inside text-sm text-gray-500">
-                                    <li>eCommerce platform architecture</li>
-                                    <li>RESTful API development</li>
-                                    <li>React.js integrations</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Continue adding other positions following the same pattern -->
-                <!-- AutoZone, Speed Commerce, Tata Consultancy Services, etc. -->
-
-            </div>
-        </section>
-
-        <!-- Podcast & Education -->
-        <div class="grid md:grid-cols-2 gap-8">
-            <!-- Podcast Section -->
-            <section>
-                <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">Podcast Host</h2>
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <div class="flex items-center mb-4">
-                        <div class="w-20 h-20 bg-gray-200 rounded-lg flex items-center justify-center mr-4">
-                            <span class="text-gray-500 text-sm">Podcast Art</span>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold text-gray-800">From Zero to N</h3>
-                            <p class="text-gray-600">Since Aug 2021</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600">Discussing technology leadership, career development, and digital transformation strategies with industry experts.</p>
-                </div>
-            </section>
-
-            <!-- Education & Certifications -->
-            <section>
-                <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">Certifications</h2>
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <div class="mb-4">
-                        <h3 class="font-semibold text-gray-800">SCJP (Sun Certified Java Programmer)</h3>
-                        <p class="text-gray-600 text-sm">Java 1.4 Platform</p>
-                    </div>
-                    <div class="mb-4">
-                        <h3 class="font-semibold text-gray-800">Oracle Commerce Specialist</h3>
-                        <p class="text-gray-600 text-sm">ATG Implementation</p>
+        // Render functions
+        function renderResume() {
+            const container = document.getElementById('resume-container');
+            
+            // Header
+            container.innerHTML = `
+                <div class="flex items-center mb-12">
+                    <div class="${resumeData.header.image.class}">
+                        <span class="text-gray-500">${resumeData.header.image.placeholder}</span>
                     </div>
                     <div>
-                        <h3 class="font-semibold text-gray-800">Cloud Architecture</h3>
-                        <p class="text-gray-600 text-sm">GCP & AWS Solutions</p>
+                        <h1 class="text-4xl font-bold text-gray-800 mb-2">${resumeData.header.name}</h1>
+                        <p class="text-2xl text-blue-600 font-semibold">${resumeData.header.title}</p>
+                        <p class="text-gray-600 mt-2">${resumeData.header.experience}</p>
                     </div>
                 </div>
-            </section>
-        </div>
+            `;
 
-        <!-- Footer Note -->
-        <div class="mt-12 text-center text-gray-500 text-sm">
-            <p>Open to consulting opportunities and technical leadership roles</p>
-            <p class="mt-2">📍 Chihuahua, Mexico | ✉️ email@example.com | 📱 +1 234 567 890</p>
-        </div>
-    </div>
+            // About Section
+            container.innerHTML += `
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">Professional Summary</h2>
+                    <p class="text-gray-600 leading-relaxed">${resumeData.about.summary}</p>
+                </section>
+            `;
+
+            // Skills Grid
+            container.innerHTML += `
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2">Technical Expertise</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        ${resumeData.skills.map(skill => `
+                            <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded text-center">${skill}</div>
+                        `).join('')}
+                    </div>
+                </section>
+            `;
+
+            // Experience Timeline
+            container.innerHTML += `
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-8 border-b-2 border-blue-500 pb-2">Professional Journey</h2>
+                    <div class="relative">
+                        <div class="absolute left-1/2 w-1 bg-gray-200 top-0 bottom-0 -ml-px"></div>
+                        ${resumeData.experience.map((exp, index) => `
+                            <div class="mb-8 relative">
+                                <div class="flex items-center mb-4">
+                                    <div class="absolute left-1/2 -ml-3 w-6 h-6 bg-blue-500 rounded-full"></div>
+                                    <div class="w-5/12 text-right pr-8">
+                                        <h3 class="font-semibold text-gray-800">${exp.title}</h3>
+                                        <p class="text-gray-600">${exp.company}</p>
+                                        <p class="text-sm text-gray-500">${exp.dates}</p>
+                                    </div>
+                                    <div class="w-5/12 pl-8">
+                                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                                            <ul class="mt-2 list-disc list-inside text-sm text-gray-500">
+                                                ${exp.highlights.map(highlight => `
+                                                    <li>${highlight}</li>
+                                                `).join('')}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </section>
+            `;
+
+            // Podcast & Certifications
+            container.innerHTML += `
+                <div class="grid md:grid-cols-2 gap-8">
+                    <section>
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">Podcast Host</h2>
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <div class="flex items-center mb-4">
+                                <div class="w-20 h-20 bg-gray-200 rounded-lg flex items-center justify-center mr-4">
+                                    <span class="text-gray-500 text-sm">Podcast Art</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800">${resumeData.podcast.title}</h3>
+                                    <p class="text-gray-600">Since ${resumeData.podcast.startDate}</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600">${resumeData.podcast.description}</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">Certifications</h2>
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            ${resumeData.certifications.map(cert => `
+                                <div class="mb-4">
+                                    <h3 class="font-semibold text-gray-800">${cert.name}</h3>
+                                    <p class="text-gray-600 text-sm">${cert.details}</p>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </section>
+                </div>
+            `;
+
+            // Footer
+            container.innerHTML += `
+                <div class="mt-12 text-center text-gray-500 text-sm">
+                    <p>Open to consulting opportunities and technical leadership roles</p>
+                    <p class="mt-2">
+                        📍 ${resumeData.contact.location} | 
+                        ✉️ ${resumeData.contact.email} | 
+                        📱 ${resumeData.contact.phone}
+                    </p>
+                </div>
+            `;
+        }
+
+        // Initialize the resume when page loads
+        document.addEventListener('DOMContentLoaded', renderResume);
+    </script>
 </body>
 </html>
