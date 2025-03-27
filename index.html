@@ -19,17 +19,15 @@
             },
             "about": {
                 "summary": [
-                    "Senior Software Architect with over 16 years of experience in the software development industry, specializing in e-commerce solutions with Java and Oracle Commerce.",
-                    "Currently Director of Technology at Icreon, coordinating offshore/onshore teams to deliver high-quality eCommerce projects through technological innovation and process optimization.",
-                    "Skilled in multiple technologies including ATG, BCC/CA, PL/SQL, Commercetools, GCP, Docker, AWS, and Jenkins.",
-                    "Dedicated to knowledge sharing and open communication to drive project success and organizational growth."
+                    "Senior Software Architect with over 16 years of experience specializing in e-commerce solutions.",
+                    "Currently Director of Technology at Icreon, leading global teams in enterprise eCommerce implementations.",
+                    "Expert in Java, Oracle Commerce, commercetools, and cloud architectures."
                 ]
             },
             "skills": [
-                "Java", "Oracle Commerce", "ATG", "commercetools", 
-                "GCP", "Docker", "AWS", "Jenkins", "PL/SQL", 
-                "React.js", "RESTful WebServices", "E-Commerce",
-                "Cloud Architecture", "CI/CD", "Solutions Architecture"
+                "Java", "Oracle Commerce", "ATG", "commercetools",
+                "GCP", "AWS", "Docker", "Jenkins", "React.js",
+                "RESTful APIs", "Cloud Architecture", "CI/CD"
             ],
             "experience": [
                 {
@@ -55,31 +53,17 @@
                     "description": [
                         "Implemented commercetools Composable Commerce solutions",
                         "Designed end-to-end solutions for large retailers",
-                        "Integrated cloud-based and on-premises systems",
                         "Managed cross-functional teams across implementation lifecycle"
                     ],
                     "skills": ["commercetools", "Composable Commerce", "Cloud Integration"]
-                },
-                {
-                    "title": "Solutions Architect",
-                    "company": "Oracle",
-                    "dates": "Apr 2021 - Nov 2022",
-                    "location": "Chihuahua, Mexico",
-                    "duration": "1 yr 8 mos",
-                    "description": [
-                        "Designed and implemented Oracle Commerce solutions",
-                        "Developed RESTful APIs and React.js integrations",
-                        "Supported enterprise eCommerce clients"
-                    ],
-                    "skills": ["Oracle Commerce", "React.js", "RESTful APIs"]
-                },
-                // Add other positions following the same structure
+                }
+                // Add other experiences following the same format
             ],
             "podcast": {
                 "title": "From Zero to N",
                 "dates": "Aug 2021 - Present",
                 "duration": "3 yrs 8 mos",
-                "description": "Host technology-focused podcast discussing career journeys, industry insights, and professional development with industry experts."
+                "description": "Host technology-focused podcast discussing career journeys and industry insights."
             },
             "certifications": [
                 "SCJP (Sun Certified Java Programmer) - Java 1.4 Platform",
@@ -95,7 +79,7 @@
         function renderResume() {
             const container = document.getElementById('resume-container');
             
-            // Header Section
+            // Header
             container.innerHTML = `
                 <div class="flex items-center mb-12">
                     <div class="w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center mr-8">
@@ -119,7 +103,7 @@
                 </section>
             `;
 
-            // Skills Section
+            // Skills Grid
             container.innerHTML += `
                 <section class="mb-12">
                     <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2">Technical Skills</h2>
@@ -131,7 +115,7 @@
                 </section>
             `;
 
-            // Experience Timeline
+            // Fixed Experience Timeline
             container.innerHTML += `
                 <section class="mb-12">
                     <h2 class="text-2xl font-bold text-gray-800 mb-8 border-b-2 border-blue-500 pb-2">Professional Experience</h2>
@@ -204,7 +188,6 @@
             `;
         }
 
-        // Initialize when page loads
         document.addEventListener('DOMContentLoaded', renderResume);
     </script>
 </body>
