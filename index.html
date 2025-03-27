@@ -3,92 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae - Obed Murillo</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        header {
-            text-align: center;
-            background-color: #f2f2f2;
-            padding: 20px;
-        }
-        section {
-            margin: 20px;
-        }
-        h2 {
-            color: #333;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-    </style>
+    <title>Senior Software Architect - Your Name</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-50">
+    <div class="container mx-auto px-4 py-12 max-w-6xl">
+        <!-- Header -->
+        <div class="flex items-center mb-12">
+            <div class="w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center mr-8">
+                <span class="text-gray-500">Profile Photo</span>
+            </div>
+            <div>
+                <h1 class="text-4xl font-bold text-gray-800 mb-2">Your Name</h1>
+                <p class="text-2xl text-blue-600 font-semibold">Senior Software Architect</p>
+                <p class="text-gray-600 mt-2">16+ years in eCommerce & Digital Solutions</p>
+            </div>
+        </div>
 
-    <header>
-        <h1>Obed Murillo</h1>
-        <p>Ingeniero</p>
-    </header>
+        <!-- About Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">Professional Summary</h2>
+            <p class="text-gray-600 leading-relaxed">
+                Senior Software Architect with extensive experience in eCommerce solutions, currently serving as Director of Technology at Icreon. Expertise in leading global teams, implementing composable commerce architectures (commercetools, Oracle Commerce), and driving digital transformation. Proven track record in delivering complex projects through coordinated offshore/onshore team management.
+            </p>
+        </section>
 
-    <section>
-        <h2>Información de Contacto</h2>
-        <ul>
-            <li><strong>Dirección:</strong> Calle Inventada #123, Ciudad Imaginaria</li>
-            <li><strong>Teléfono:</strong> (123) 456-7890</li>
-            <li><strong>Correo Electrónico:</strong> obed.murillo@email.com</li>
-            <li><strong>LinkedIn:</strong> linkedin.com/in/obedmurillo</li>
-        </ul>
-    </section>
+        <!-- Skills Grid -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2">Technical Expertise</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded text-center">Java & Oracle Commerce</div>
+                <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded text-center">commercetools</div>
+                <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded text-center">ATG Framework</div>
+                <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded text-center">Cloud Architecture (GCP/AWS)</div>
+                <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded text-center">Docker & Kubernetes</div>
+                <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded text-center">CI/CD (Jenkins)</div>
+                <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded text-center">React.js & Frontend Systems</div>
+                <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded text-center">PL/SQL & Database Design</div>
+            </div>
+        </section>
 
-    <section>
-        <h2>Resumen Profesional</h2>
-        <p>Soy un ingeniero apasionado por la innovación y la resolución de problemas. Con una sólida formación en ingeniería y habilidades en desarrollo de proyectos, estoy comprometido con la excelencia y el trabajo en equipo.</p>
-    </section>
+        <!-- Experience Timeline -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-8 border-b-2 border-blue-500 pb-2">Professional Journey</h2>
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="absolute left-1/2 w-1 bg-gray-200 top-0 bottom-0 -ml-px"></div>
 
-    <section>
-        <h2>Educación</h2>
-        <ul>
-            <li><strong>Titulo Universitario en Ingeniería:</strong> Universidad Imaginaria, Ciudad Imaginaria, Año de Graduación</li>
-        </ul>
-    </section>
+                <!-- Icreon -->
+                <div class="mb-8 relative">
+                    <div class="flex items-center mb-4">
+                        <div class="absolute left-1/2 -ml-3 w-6 h-6 bg-blue-500 rounded-full"></div>
+                        <div class="w-5/12 text-right pr-8">
+                            <h3 class="font-semibold text-gray-800">Director of Technology</h3>
+                            <p class="text-gray-600">Icreon</p>
+                            <p class="text-sm text-gray-500">Jul 2024 - Present</p>
+                        </div>
+                        <div class="w-5/12 pl-8">
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <p class="text-gray-600">Leading global teams in enterprise eCommerce solutions delivery. Driving technical strategy, cloud adoption, and process optimization for international clients.</p>
+                                <ul class="mt-2 list-disc list-inside text-sm text-gray-500">
+                                    <li>Coordinate offshore/onshore teams</li>
+                                    <li>Implement quality assurance processes</li>
+                                    <li>Drive technological innovation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <section>
-        <h2>Experiencia Laboral</h2>
-        <ul>
-            <li>
-                <strong>Ingeniero de Proyectos</strong><br>
-                Empresa Innovadora, Ciudad Creativa<br>
-                Fechas: Mes/Año - Mes/Año<br>
-                Descripción breve de las responsabilidades y logros.
-            </li>
-            <!-- Puedes agregar más experiencias laborales si es necesario -->
-        </ul>
-    </section>
+                <!-- changeCX -->
+                <div class="mb-8 relative">
+                    <div class="flex items-center mb-4">
+                        <div class="absolute left-1/2 -ml-3 w-6 h-6 bg-blue-500 rounded-full"></div>
+                        <div class="w-5/12 text-right pr-8">
+                            <h3 class="font-semibold text-gray-800">Senior Commerce Architect</h3>
+                            <p class="text-gray-600">changeCX</p>
+                            <p class="text-sm text-gray-500">Nov 2022 - Jul 2024</p>
+                        </div>
+                        <div class="w-5/12 pl-8">
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <p class="text-gray-600">Led implementation of composable commerce solutions for major retailers using commercetools.</p>
+                                <ul class="mt-2 list-disc list-inside text-sm text-gray-500">
+                                    <li>Composable Commerce architecture design</li>
+                                    <li>Cloud/on-prem systems integration</li>
+                                    <li>End-to-end solution implementation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <section>
-        <h2>Habilidades</h2>
-        <ul>
-            <li>Ingeniería de Proyectos</li>
-            <li>Análisis de Datos</li>
-            <li>Resolución de Problemas</li>
-            <li>Trabajo en Equipo</li>
-            <!-- Agrega más habilidades según sea necesario -->
-        </ul>
-    </section>
+                <!-- Oracle -->
+                <div class="mb-8 relative">
+                    <div class="flex items-center mb-4">
+                        <div class="absolute left-1/2 -ml-3 w-6 h-6 bg-blue-500 rounded-full"></div>
+                        <div class="w-5/12 text-right pr-8">
+                            <h3 class="font-semibold text-gray-800">Solutions Architect</h3>
+                            <p class="text-gray-600">Oracle</p>
+                            <p class="text-sm text-gray-500">Apr 2021 - Nov 2022</p>
+                        </div>
+                        <div class="w-5/12 pl-8">
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <p class="text-gray-600">Designed and implemented Oracle Commerce solutions for enterprise clients.</p>
+                                <ul class="mt-2 list-disc list-inside text-sm text-gray-500">
+                                    <li>eCommerce platform architecture</li>
+                                    <li>RESTful API development</li>
+                                    <li>React.js integrations</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <section>
-        <h2>Idiomas</h2>
-        <ul>
-            <li>Español (Nativo)</li>
-            <li>Inglés (Intermedio)</li>
-            <!-- Agrega más idiomas si es necesario -->
-        </ul>
-    </section>
+                <!-- Continue adding other positions following the same pattern -->
+                <!-- AutoZone, Speed Commerce, Tata Consultancy Services, etc. -->
 
+            </div>
+        </section>
+
+        <!-- Podcast & Education -->
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Podcast Section -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">Podcast Host</h2>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-20 h-20 bg-gray-200 rounded-lg flex items-center justify-center mr-4">
+                            <span class="text-gray-500 text-sm">Podcast Art</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">From Zero to N</h3>
+                            <p class="text-gray-600">Since Aug 2021</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">Discussing technology leadership, career development, and digital transformation strategies with industry experts.</p>
+                </div>
+            </section>
+
+            <!-- Education & Certifications -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">Certifications</h2>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="mb-4">
+                        <h3 class="font-semibold text-gray-800">SCJP (Sun Certified Java Programmer)</h3>
+                        <p class="text-gray-600 text-sm">Java 1.4 Platform</p>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="font-semibold text-gray-800">Oracle Commerce Specialist</h3>
+                        <p class="text-gray-600 text-sm">ATG Implementation</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-800">Cloud Architecture</h3>
+                        <p class="text-gray-600 text-sm">GCP & AWS Solutions</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer Note -->
+        <div class="mt-12 text-center text-gray-500 text-sm">
+            <p>Open to consulting opportunities and technical leadership roles</p>
+            <p class="mt-2">📍 Chihuahua, Mexico | ✉️ email@example.com | 📱 +1 234 567 890</p>
+        </div>
+    </div>
 </body>
 </html>
