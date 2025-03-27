@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JSON-Powered Resume</title>
+    <title>Professional Resume</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50">
-    <div id="resume-container" class="container mx-auto px-4 py-12 max-w-6xl">
-        <!-- Content will be inserted here -->
-    </div>
+    <div id="resume-container" class="container mx-auto px-4 py-12 max-w-6xl"></div>
 
     <script>
         const resumeData = {
@@ -17,61 +15,75 @@
                 "name": "Your Name",
                 "title": "Senior Software Architect",
                 "experience": "16+ years in eCommerce & Digital Solutions",
-                "image": {
-                    "placeholder": "Profile Photo",
-                    "class": "w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center mr-8"
-                }
+                "image": "Profile Photo"
             },
             "about": {
-                "summary": "Senior Software Architect with extensive experience in eCommerce solutions, currently serving as Director of Technology at Icreon. Expertise in leading global teams, implementing composable commerce architectures (commercetools, Oracle Commerce), and driving digital transformation."
+                "summary": [
+                    "Senior Software Architect with over 16 years of experience in the software development industry, specializing in e-commerce solutions with Java and Oracle Commerce.",
+                    "Currently Director of Technology at Icreon, coordinating offshore/onshore teams to deliver high-quality eCommerce projects through technological innovation and process optimization.",
+                    "Skilled in multiple technologies including ATG, BCC/CA, PL/SQL, Commercetools, GCP, Docker, AWS, and Jenkins.",
+                    "Dedicated to knowledge sharing and open communication to drive project success and organizational growth."
+                ]
             },
             "skills": [
-                "Java & Oracle Commerce",
-                "commercetools",
-                "ATG Framework",
-                "Cloud Architecture (GCP/AWS)",
-                "Docker & Kubernetes",
-                "CI/CD (Jenkins)",
-                "React.js & Frontend Systems",
-                "PL/SQL & Database Design"
+                "Java", "Oracle Commerce", "ATG", "commercetools", 
+                "GCP", "Docker", "AWS", "Jenkins", "PL/SQL", 
+                "React.js", "RESTful WebServices", "E-Commerce",
+                "Cloud Architecture", "CI/CD", "Solutions Architecture"
             ],
             "experience": [
                 {
                     "title": "Director of Technology",
                     "company": "Icreon",
                     "dates": "Jul 2024 - Present",
-                    "highlights": [
-                        "Coordinate offshore/onshore teams",
-                        "Implement quality assurance processes",
-                        "Drive technological innovation"
-                    ]
+                    "location": "Remote",
+                    "duration": "9 mos",
+                    "description": [
+                        "Lead global teams in delivering enterprise eCommerce solutions",
+                        "Coordinate offshore/onshore development teams",
+                        "Drive technological innovation and process optimization",
+                        "Ensure high-quality project delivery and client satisfaction"
+                    ],
+                    "skills": ["Team Leadership", "Cloud Architecture", "Process Optimization"]
                 },
                 {
-                    "title": "Senior Commerce Architect",
+                    "title": "Senior Commerce Architect Omni Channel",
                     "company": "changeCX",
                     "dates": "Nov 2022 - Jul 2024",
-                    "highlights": [
-                        "Composable Commerce architecture design",
-                        "Cloud/on-prem systems integration",
-                        "End-to-end solution implementation"
-                    ]
+                    "location": "Chihuahua, Mexico",
+                    "duration": "1 yr 9 mos",
+                    "description": [
+                        "Implemented commercetools Composable Commerce solutions",
+                        "Designed end-to-end solutions for large retailers",
+                        "Integrated cloud-based and on-premises systems",
+                        "Managed cross-functional teams across implementation lifecycle"
+                    ],
+                    "skills": ["commercetools", "Composable Commerce", "Cloud Integration"]
                 },
-                // Add other experiences following the same structure
+                {
+                    "title": "Solutions Architect",
+                    "company": "Oracle",
+                    "dates": "Apr 2021 - Nov 2022",
+                    "location": "Chihuahua, Mexico",
+                    "duration": "1 yr 8 mos",
+                    "description": [
+                        "Designed and implemented Oracle Commerce solutions",
+                        "Developed RESTful APIs and React.js integrations",
+                        "Supported enterprise eCommerce clients"
+                    ],
+                    "skills": ["Oracle Commerce", "React.js", "RESTful APIs"]
+                },
+                // Add other positions following the same structure
             ],
             "podcast": {
                 "title": "From Zero to N",
-                "startDate": "Aug 2021",
-                "description": "Discussing technology leadership, career development, and digital transformation strategies with industry experts."
+                "dates": "Aug 2021 - Present",
+                "duration": "3 yrs 8 mos",
+                "description": "Host technology-focused podcast discussing career journeys, industry insights, and professional development with industry experts."
             },
             "certifications": [
-                {
-                    "name": "SCJP (Sun Certified Java Programmer)",
-                    "details": "Java 1.4 Platform"
-                },
-                {
-                    "name": "Oracle Commerce Specialist",
-                    "details": "ATG Implementation"
-                }
+                "SCJP (Sun Certified Java Programmer) - Java 1.4 Platform",
+                "Oracle Commerce Specialist - ATG Implementation"
             ],
             "contact": {
                 "location": "Chihuahua, Mexico",
@@ -80,15 +92,14 @@
             }
         };
 
-        // Render functions
         function renderResume() {
             const container = document.getElementById('resume-container');
             
-            // Header
+            // Header Section
             container.innerHTML = `
                 <div class="flex items-center mb-12">
-                    <div class="${resumeData.header.image.class}">
-                        <span class="text-gray-500">${resumeData.header.image.placeholder}</span>
+                    <div class="w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center mr-8">
+                        <span class="text-gray-500">${resumeData.header.image}</span>
                     </div>
                     <div>
                         <h1 class="text-4xl font-bold text-gray-800 mb-2">${resumeData.header.name}</h1>
@@ -102,14 +113,16 @@
             container.innerHTML += `
                 <section class="mb-12">
                     <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">Professional Summary</h2>
-                    <p class="text-gray-600 leading-relaxed">${resumeData.about.summary}</p>
+                    <div class="text-gray-600 leading-relaxed space-y-4">
+                        ${resumeData.about.summary.map(p => `<p>${p}</p>`).join('')}
+                    </div>
                 </section>
             `;
 
-            // Skills Grid
+            // Skills Section
             container.innerHTML += `
                 <section class="mb-12">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2">Technical Expertise</h2>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2">Technical Skills</h2>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                         ${resumeData.skills.map(skill => `
                             <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded text-center">${skill}</div>
@@ -121,10 +134,10 @@
             // Experience Timeline
             container.innerHTML += `
                 <section class="mb-12">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-8 border-b-2 border-blue-500 pb-2">Professional Journey</h2>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-8 border-b-2 border-blue-500 pb-2">Professional Experience</h2>
                     <div class="relative">
                         <div class="absolute left-1/2 w-1 bg-gray-200 top-0 bottom-0 -ml-px"></div>
-                        ${resumeData.experience.map((exp, index) => `
+                        ${resumeData.experience.map(exp => `
                             <div class="mb-8 relative">
                                 <div class="flex items-center mb-4">
                                     <div class="absolute left-1/2 -ml-3 w-6 h-6 bg-blue-500 rounded-full"></div>
@@ -132,14 +145,18 @@
                                         <h3 class="font-semibold text-gray-800">${exp.title}</h3>
                                         <p class="text-gray-600">${exp.company}</p>
                                         <p class="text-sm text-gray-500">${exp.dates}</p>
+                                        <p class="text-sm text-gray-500">${exp.location}</p>
                                     </div>
                                     <div class="w-5/12 pl-8">
                                         <div class="bg-white p-6 rounded-lg shadow-sm">
-                                            <ul class="mt-2 list-disc list-inside text-sm text-gray-500">
-                                                ${exp.highlights.map(highlight => `
-                                                    <li>${highlight}</li>
-                                                `).join('')}
+                                            <ul class="list-disc list-inside text-gray-600 mb-4">
+                                                ${exp.description.map(d => `<li>${d}</li>`).join('')}
                                             </ul>
+                                            <div class="flex flex-wrap gap-2">
+                                                ${exp.skills.map(s => `
+                                                    <span class="bg-blue-100 text-blue-800 text-sm px-2 py-1 rounded">${s}</span>
+                                                `).join('')}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -151,30 +168,22 @@
 
             // Podcast & Certifications
             container.innerHTML += `
-                <div class="grid md:grid-cols-2 gap-8">
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
                     <section>
-                        <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">Podcast Host</h2>
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">Podcast</h2>
                         <div class="bg-white p-6 rounded-lg shadow-sm">
-                            <div class="flex items-center mb-4">
-                                <div class="w-20 h-20 bg-gray-200 rounded-lg flex items-center justify-center mr-4">
-                                    <span class="text-gray-500 text-sm">Podcast Art</span>
-                                </div>
-                                <div>
-                                    <h3 class="text-xl font-semibold text-gray-800">${resumeData.podcast.title}</h3>
-                                    <p class="text-gray-600">Since ${resumeData.podcast.startDate}</p>
-                                </div>
-                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">${resumeData.podcast.title}</h3>
+                            <p class="text-gray-600 mb-4">${resumeData.podcast.dates} (${resumeData.podcast.duration})</p>
                             <p class="text-gray-600">${resumeData.podcast.description}</p>
                         </div>
                     </section>
 
                     <section>
                         <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">Certifications</h2>
-                        <div class="bg-white p-6 rounded-lg shadow-sm">
-                            ${resumeData.certifications.map(cert => `
-                                <div class="mb-4">
-                                    <h3 class="font-semibold text-gray-800">${cert.name}</h3>
-                                    <p class="text-gray-600 text-sm">${cert.details}</p>
+                        <div class="bg-white p-6 rounded-lg shadow-sm space-y-4">
+                            ${resumeData.certifications.map(c => `
+                                <div class="border-l-4 border-blue-500 pl-4">
+                                    <p class="text-gray-800 font-medium">${c}</p>
                                 </div>
                             `).join('')}
                         </div>
@@ -185,17 +194,17 @@
             // Footer
             container.innerHTML += `
                 <div class="mt-12 text-center text-gray-500 text-sm">
-                    <p>Open to consulting opportunities and technical leadership roles</p>
-                    <p class="mt-2">
-                        📍 ${resumeData.contact.location} | 
-                        ✉️ ${resumeData.contact.email} | 
-                        📱 ${resumeData.contact.phone}
-                    </p>
+                    <p class="mb-2">Open to consulting opportunities and technical leadership roles</p>
+                    <div class="flex items-center justify-center space-x-4">
+                        <span>📍 ${resumeData.contact.location}</span>
+                        <span>✉️ ${resumeData.contact.email}</span>
+                        <span>📱 ${resumeData.contact.phone}</span>
+                    </div>
                 </div>
             `;
         }
 
-        // Initialize the resume when page loads
+        // Initialize when page loads
         document.addEventListener('DOMContentLoaded', renderResume);
     </script>
 </body>
